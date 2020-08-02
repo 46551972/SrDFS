@@ -1,0 +1,20 @@
+function opt = optSetforS3C(opt)    
+
+if ~exist('opt','var'),    opt= [];      end
+if ~isfield(opt,'iter_max'), opt.iter_max =10;  end   %% For structure learning and label learning
+if ~isfield(opt,'nu'),  opt.nu =1;  end
+if ~isfield(opt,'gamma0'), opt.gamma0 =0.05;  end   %% This is lambdaZ
+if ~isfield(opt,'affine'),  opt.affine = 0;  end
+if ~isfield(opt,'outliers'), opt.outliers =1;  end
+if ~isfield(opt,'lambda'), opt.lambda =10;  end
+if ~isfield(opt,'dimR'), opt.dimR = 0;  end  % target dimension for PCA
+if ~isfield(opt,'SSCrho'),  opt.SSCrho =1;   end
+if ~isfield(opt,'tol'), opt.tol =1e-3;    end
+if ~isfield(opt,'epsilon'), opt.epsilon =1e-3;   end
+if ~isfield(opt,'maxIter'), opt.maxIter =150;   end   % For iterations in SSC algorithm
+if ~isfield(opt,'rho'), opt.rho =1.1;  end 
+if ~isfield(opt,'k'),    opt.k =5;  end 
+% if ~isfield(opt,'lambdaZ'),    opt.lambdaZ =0.05;  end 
+if ~isfield(opt,'gamma_A'),    opt.gamma_A = 0.1;  end 
+if ~isfield(opt,'alphaTheta'),    opt.alphaTheta =0.5;  end 
+if ~isfield(opt,'nbcluster'),    opt.nbcluster =50;  end 
